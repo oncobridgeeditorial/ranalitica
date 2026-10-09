@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Ranalítica Médica</title><meta name="description" content="Déjanos tu solicitud o escríbenos por correo para agendar tu junta inicial gratuita por Zoom."><meta name="theme-color" content="#173A2B">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header"><div class="wrap bar"><a class="wordmark" href="index.html"><img src="images/logo-rana.png" alt="" width="200" height="156">Ranalítica Médica</a><nav class="nav" aria-label="Principal"><a href="index.html" data-nav="inicio">Inicio</a><a href="servicios.html" data-nav="servicios">Servicios</a><a href="cotizador.html" data-nav="cotizador">Cotizador</a><a href="equipo.html" data-nav="equipo">Equipo</a><a href="cursos.html" data-nav="cursos">Cursos</a><a href="opiniones.html" data-nav="opiniones">Opiniones</a><a href="contacto.html" data-nav="contacto" aria-current="page">Contacto</a></nav></div></header>
+<main>
+<section class="pagina"><div class="wrap">
+  <h1>Solicitud y contacto</h1>
+  <p class="intro">Déjanos tus datos y te escribimos nosotros para agendar la junta inicial por Zoom, donde platicamos tu proyecto. No tiene costo ni compromiso.</p>
+</div></section>
+
+<section class="seccion" style="padding-top:1rem"><div class="wrap">
+  <form id="solicitud" class="campos" novalidate>
+    <div><label for="f-nombre">Nombre completo</label><input id="f-nombre" name="nombre" autocomplete="name" required></div>
+    <div><label for="f-whatsapp">WhatsApp</label><input id="f-whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="10 dígitos"></div>
+    <div><label for="f-correo">Correo electrónico</label><input id="f-correo" name="correo" type="email" autocomplete="email"></div>
+    <p class="ayuda">Basta con uno de los dos: el que prefieras para que te escribamos.</p>
+    <div><label for="f-esp">Especialidad</label><input id="f-esp" name="especialidad" placeholder="Por ejemplo, pediatría"></div>
+    <div><label for="f-inst">Hospital o institución</label><input id="f-inst" name="institucion"></div>
+    <div><label for="f-anio">Año de residencia</label>
+      <select id="f-anio" name="anio"><option value="">Prefiero no decir</option><option>Primer año</option><option>Segundo año</option><option>Tercer año</option><option>Cuarto año o más</option><option>Ya terminé la residencia</option></select></div>
+    <div><label for="f-nec">¿Qué necesitas?</label>
+      <select id="f-nec" name="necesidad" required><option value="">Elige una opción</option><option>Análisis estadístico</option><option>Redacción de tesis</option><option>Protocolo de investigación</option><option>Corrección de mi tesis</option><option>Rescatar una tesis</option><option>Convertir mi tesis en artículo</option><option>Capacitación en estadística</option><option>Automatizar formularios o pasar datos a una base de datos</option><option>Práctica de defensa o lectura de tesis</option><option>Todavía no sé, quiero platicarlo</option></select></div>
+    <div><label for="f-plazo">¿Para cuándo lo necesitas?</label>
+      <select id="f-plazo" name="plazo"><option value="">Todavía no lo sé</option><option>Sin prisa</option><option>En un mes o más</option><option>En unas dos semanas</option><option>Lo antes posible</option></select></div>
+    <div><label for="f-msg">Cuéntanos de tu proyecto</label><textarea id="f-msg" name="mensaje" rows="4" placeholder="Tema, avance que llevas, qué te pidió tu tutor… lo que quieras compartir"></textarea></div>
+    <div class="honeypot" aria-hidden="true"><label>No llenar<input name="_honey" tabindex="-1" autocomplete="off"></label></div>
+    <label class="check"><input type="checkbox" name="acepto"> <span>Acepto que me contacten para hablar de mi solicitud. Usamos tus datos solo para eso.</span></label>
+    <div><button type="submit" class="btn btn-primary">Enviar solicitud</button></div>
+    <p class="estado" id="estado-solicitud" aria-live="polite"></p>
+    <p class="ayuda">Enviar la solicitud no es un contrato ni un cobro. Es solo para que te escribamos.</p>
+  </form>
+</div></section>
+
+<section class="seccion"><div class="wrap">
+  <h2>Prefieres escribirnos directo</h2>
+  <div class="filas">
+    <div class="fila"><h3>Correo</h3>
+      <p><a href="#" data-mail="Hola, quiero platicar mi proyecto de tesis." data-mail-subject="Quiero platicar mi proyecto"><span data-email-text>oncobridge.editorial@gmail.com</span></a></p></div>
+  </div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap"><p>© 2026 Ranalítica Médica</p></div></footer>
+<script src="js/site.js"></script><script src="js/solicitud.js"></script>
+</body></html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cotizador | Ranalítica Médica</title><meta name="description" content="Arma el estimado de tu proyecto: servicio, secciones y plazo de entrega."><meta name="theme-color" content="#173A2B">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="site-header"><div class="wrap bar"><a class="wordmark" href="index.html"><img src="images/logo-rana.png" alt="" width="200" height="156">Ranalítica Médica</a><nav class="nav" aria-label="Principal"><a href="index.html" data-nav="inicio">Inicio</a><a href="servicios.html" data-nav="servicios">Servicios</a><a href="cotizador.html" data-nav="cotizador" aria-current="page">Cotizador</a><a href="equipo.html" data-nav="equipo">Equipo</a><a href="cursos.html" data-nav="cursos">Cursos</a><a href="opiniones.html" data-nav="opiniones">Opiniones</a><a href="contacto.html" data-nav="contacto">Contacto</a></nav></div></header>
+<main>
+<section class="pagina"><div class="wrap">
+  <h1>Cotizador</h1>
+  <p class="intro">Arma tu estimado en un minuto. Es una referencia, no una cotización formal: el precio final se confirma en la junta inicial, que no cuesta.</p>
+</div></section>
+
+<div class="wrap">
+  <div class="cotizador" id="cotizador">
+    <form onsubmit="return false">
+      <fieldset><legend>¿Qué necesitas?</legend>
+        <div class="opciones">
+<label class="opcion"><input type="radio" name="servicio" value="redaccion" checked><span class="txt">Redacción de tesis<span class="sub">Eliges las secciones que necesitas</span></span></label>
+<label class="opcion"><input type="radio" name="servicio" value="asesoria"><span class="txt">Asesoría estadística<span class="sub">Según la extensión del análisis</span></span></label>
+<label class="opcion"><input type="radio" name="servicio" value="protocolo"><span class="txt">Protocolo de investigación</span><span class="monto">$3,000</span></label>
+<label class="opcion"><input type="radio" name="servicio" value="correccion"><span class="txt">Corrección y revisión</span><span class="monto">$2,500</span></label>
+<label class="opcion"><input type="radio" name="servicio" value="rescate"><span class="txt">Rescate de tesis<span class="sub">Sesión de conceptualización</span></span><span class="monto">$3,000</span></label>
+<label class="opcion"><input type="radio" name="servicio" value="articulo"><span class="txt">Tesis a artículo publicable</span><span class="monto">$3,500</span></label>
+<label class="opcion"><input type="radio" name="servicio" value="capacitacion"><span class="txt">Capacitación en estadística<span class="sub">Por sesión</span></span><span class="monto">$1,000</span></label>
+        </div>
+      </fieldset>
+      <fieldset data-solo="asesoria" hidden><legend>Extensión del análisis</legend>
+        <div class="opciones">
+<label class="opcion"><input type="radio" name="extension" value="corta"><span class="txt">Corta<span class="sub">Análisis puntual, pocas variables</span></span><span class="monto">$700</span></label>
+<label class="opcion"><input type="radio" name="extension" value="mediana" checked><span class="txt">Mediana<span class="sub">Análisis estándar</span></span><span class="monto">$1,000</span></label>
+<label class="opcion"><input type="radio" name="extension" value="extensa"><span class="txt">Extensa<span class="sub">Multivariado, muchas variables</span></span><span class="monto">$1,500</span></label>
+        </div>
+      </fieldset>
+      <fieldset data-solo="redaccion"><legend>Secciones que necesitas</legend>
+        <div class="opciones">
+<label class="opcion"><input type="checkbox" name="seccion" value="introduccion"><span class="txt">Introducción</span><span class="monto">$2,500</span></label>
+<label class="opcion"><input type="checkbox" name="seccion" value="metodologia" checked><span class="txt">Metodología</span><span class="monto">$1,200</span></label>
+<label class="opcion"><input type="checkbox" name="seccion" value="limpieza"><span class="txt">Limpieza de la base de datos</span><span class="monto">$500</span></label>
+<label class="opcion"><input type="checkbox" name="seccion" value="analisis" checked><span class="txt">Análisis de datos</span><span class="monto">$1,600</span></label>
+<label class="opcion"><input type="checkbox" name="seccion" value="resultados" checked><span class="txt">Resultados</span><span class="monto">$1,200</span></label>
+<label class="opcion"><input type="checkbox" name="seccion" value="puntos"><span class="txt">Puntos a discutir</span><span class="monto">$500</span></label>
+<label class="opcion"><input type="checkbox" name="seccion" value="discusion"><span class="txt">Discusión completa</span><span class="monto">$2,500</span></label>
+        </div>
+      </fieldset>
+      <fieldset><legend>Plazo de entrega</legend>
+        <div class="opciones">
+<label class="opcion"><input type="radio" name="plazo" value="estandar" checked><span class="txt">Estándar<span class="sub">3 a 4 semanas</span></span></label>
+<label class="opcion"><input type="radio" name="plazo" value="prioritario"><span class="txt">Prioritario<span class="sub">1 a 2 semanas</span></span></label>
+<label class="opcion"><input type="radio" name="plazo" value="urgente"><span class="txt">Urgente<span class="sub">menos de 1 semana</span></span></label>
+<label class="opcion"><input type="radio" name="plazo" value="expres"><span class="txt">Exprés<span class="sub">24 a 48 horas</span></span></label>
+        </div>
+      </fieldset>
+    </form>
+
+    <aside class="hoja" aria-live="polite">
+      <h2>Tu estimado</h2>
+      <p class="vacio" id="vacio" hidden>Marca al menos una sección para ver el precio.</p>
+      <ul class="lineas" id="lineas"></ul>
+      <p class="total"><span>Total</span><span id="total">$0 MXN</span></p>
+      <div class="acciones" id="acciones">
+        <a class="btn btn-primary" href="contacto.html">Llenar solicitud con este estimado</a>
+        <a class="btn btn-secondary" id="btn-wa" href="#">Pedir cotización por WhatsApp</a>
+      </div>
+      <p class="nota"><strong>Esto es un estimado.</strong> El precio final depende de tu proyecto y se confirma en la junta inicial, que es gratis. Las correcciones hasta la aprobación van incluidas.</p>
+    </aside>
+  </div>
+</div>
+<script type="application/json" id="precios-data">{"secciones": {"introduccion": {"label": "Introducción", "price": 2500}, "metodologia": {"label": "Metodología", "price": 1200}, "limpieza": {"label": "Limpieza de la base de datos", "price": 500}, "analisis": {"label": "Análisis de datos", "price": 1600}, "resultados": {"label": "Resultados", "price": 1200}, "puntos": {"label": "Puntos a discutir", "price": 500}, "discusion": {"label": "Discusión completa", "price": 2500}}, "extension": {"corta": {"label": "Corta", "price": 700}, "mediana": {"label": "Mediana", "price": 1000}, "extensa": {"label": "Extensa", "price": 1500}}, "servicios": {"protocolo": {"label": "Protocolo de investigación", "base": 3000}, "correccion": {"label": "Corrección y revisión", "base": 2500}, "rescate": {"label": "Rescate de tesis", "base": 3000}, "articulo": {"label": "Tesis a artículo publicable", "base": 3500}, "capacitacion": {"label": "Capacitación en estadística", "base": 1000}}, "plazos": {"estandar": {"label": "Estándar", "rango": "3 a 4 semanas", "mult": 1.0}, "prioritario": {"label": "Prioritario", "rango": "1 a 2 semanas", "mult": 1.25}, "urgente": {"label": "Urgente", "rango": "menos de 1 semana", "mult": 3.0}, "expres": {"label": "Exprés", "rango": "24 a 48 horas", "mult": 6.0}}}</script>
+</main>
+<footer class="site-footer"><div class="wrap"><p>© 2026 Ranalítica Médica</p></div></footer>
+<script src="js/site.js"></script><script src="js/calc.js"></script>
+</body></html>
